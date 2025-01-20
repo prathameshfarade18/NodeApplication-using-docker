@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install application dependencies
-RUN npm install
+RUN npm install --production
 
 # Copy the application code to the working directory
 COPY . .
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Command to run your application
-CMD ["node","index.js"]
+CMD ["node", "index.js"]
